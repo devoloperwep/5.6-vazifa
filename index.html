@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>5.5-dars</title>
+  </head>
+  <body>
+    <!-- header -->
+    <header class="header">
+      <div class="header__container container">
+        <h2 class="header__title">
+          <a class="header__link" href="#"> CUser </a>
+        </h2>
+        <h4 class="header__count">No user :(</h4>
+      </div>
+    </header>
+    <div class="overlay hidden"></div>
+    <!-- create user -->
+    <button id="create__user" class="create__user">Create Users</button>
+    <div class="container">
+      <ul class="user__list"></ul>
+    </div>
+    <!-- form -->
+    <form class="hidden">
+      <caption>
+        <h3>Create New User</h3>
+      </caption>
+      <label for="image">Image URL:</label>
+      <input id="image" type="url" placeholder="image" />
+      <label for="firstName">First Name:</label>
+      <input id="firstName" type="text" placeholder="firstName" />
+      <label for="lastName">Last Name:</label>
+      <input id="lastName" type="text" placeholder="lastName" />
+      <label for="age">Age:</label>
+      <input id="age" type="number" />
+      <label for="from">From</label>
+      <input id="from" type="text" placeholder="from" />
+      <label for="job">Job</label>
+      <input id="job" type="text" placeholder="job" />
+      <!-- <label id="radio__label">
+        Gender: <span>Male</span> <input type="radio" name="gender" />
+        <span>Femele</span> <input type="radio" name="gender" />
+      </label> -->
+      <button>Submit</button>
+    </form>
+    <script src="app.js"></script>
+  </body>
+</html>
