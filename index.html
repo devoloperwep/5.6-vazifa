@@ -29,21 +29,22 @@
         <h3>Create New User</h3>
       </caption>
       <label for="image">Image URL:</label>
-      <input id="image" type="url" placeholder="image" />
+      <input required id="image" type="url" placeholder="image" />
       <label for="firstName">First Name:</label>
-      <input id="firstName" type="text" placeholder="firstName" />
+      <input required id="firstName" type="text" placeholder="firstName" />
       <label for="lastName">Last Name:</label>
-      <input id="lastName" type="text" placeholder="lastName" />
+      <input required id="lastName" type="text" placeholder="lastName" />
       <label for="age">Age:</label>
-      <input id="age" type="number" />
+      <input required id="age" type="number" />
       <label for="from">From</label>
-      <input id="from" type="text" placeholder="from" />
+      <input required id="from" type="text" placeholder="from" />
       <label for="job">Job</label>
-      <input id="job" type="text" placeholder="job" />
+      <input required id="job" type="text" placeholder="job" />
       <label id="radio__label">
         Gender: <span>Male</span>
-        <input id="male" type="radio" name="gender" /> <span>Femele</span>
-        <input id="femele" type="radio" name="gender" />
+        <input required id="male" type="radio" name="gender" />
+        <span>Femele</span>
+        <input required id="femele" type="radio" name="gender" />
       </label>
       <button>Submit</button>
     </form>
