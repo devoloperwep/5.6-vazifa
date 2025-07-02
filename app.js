@@ -22,7 +22,8 @@ form.addEventListener("submit", (e) => {
   const age = form.age.value;
   const from = form.from.value;
   const job = form.job.value;
-  //   console.log(image, firstName, lastName, age, from, job);
+  const selected = document.querySelector(`input[name="gender"]:checked`);
+  console.log(image, firstName, lastName, age, from, job, selected);
   ul.innerHTML += ` <li class="user__item">
           <img
             src="${image}"
@@ -34,13 +35,16 @@ form.addEventListener("submit", (e) => {
           <h3 class="user__name">${firstName}, ${lastName}, ${age} age.</h3>
           <p class="user__from">From: ${from}</p>
           <p class="user__job">Job: ${job}</p>
-          <p class="user__gender">Gender: male</p>
+          <p class="user__gender">Gender: ${selected.id}</p>
           <button class="user__delete">Delete</button>
         </li>`;
   close();
   form.reset();
 });
 
+ul.addEventListener("click", (e) => {
+  e.target.classList == "user__delete" && e.target.parentElement.remove();
+});
 createUserBtn.addEventListener("click", open);
 overlay.addEventListener("click", close);
 document.addEventListener("keyup", (e) => {
