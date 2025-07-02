@@ -12,9 +12,7 @@ function close() {
   overlay.classList.add("hidden");
   form.classList.add("hidden");
 }
-
-// form
-form.addEventListener("submit", (e) => {
+function formChange(e) {
   e.preventDefault();
   const image = form.image.value;
   const firstName = form.firstName.value;
@@ -23,7 +21,6 @@ form.addEventListener("submit", (e) => {
   const from = form.from.value;
   const job = form.job.value;
   const selected = document.querySelector(`input[name="gender"]:checked`);
-  console.log(image, firstName, lastName, age, from, job, selected);
   ul.innerHTML += ` <li class="user__item">
           <img
             src="${image}"
@@ -40,8 +37,9 @@ form.addEventListener("submit", (e) => {
         </li>`;
   close();
   form.reset();
-});
+}
 
+form.addEventListener("submit", formChange);
 ul.addEventListener("click", (e) => {
   e.target.classList == "user__delete" && e.target.parentElement.remove();
 });
